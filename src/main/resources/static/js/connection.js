@@ -28,3 +28,52 @@ function submit() {
 
     toPage('/promo.html')
 }
+
+function getAllQuest() {
+    var xhr = new XMLHttpRequest();
+
+    xhr.open("GET", "/getAll");
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhr.onload = function () {
+        // do something to response
+        var status = this.status;
+        if(status==200){
+            var res = JSON.parse(this.responseText);
+            if (res.length > 0) {
+                var br = document.createElement('br');
+                for (var i = 0; i < res.length; i++) {
+                    var div = document.createElement('div');
+                    div.innerHTML = getQuestionnaireRes(res[i]);
+                    document.body.appendChild(div);
+                }
+            }
+        }
+        else if(status==404)
+            console.log("Ресурс не найден")
+        else
+            console.log(this.statusText)
+    };
+    xhr.send(null);
+}
+
+function getQuestionnaireRes(res) {
+    return " <br/>-------------------------------------------------------------"
+        + " <br/>Имя                                   : "+res.question1
+        + " <br/>Является ли клиентом                  : "+res.question2
+        + " <br/>Как долго пользовался услугами        : "+res.question3
+        + " <br/>Какими услугами пользовался           : "+res.question4
+        + " <br/>Оценка качеству                       : "+res.question5
+        + " <br/>Степень довольства                    : "+res.question6
+        + " <br/>Устраивает ли цена                    : "+res.question7
+        + " <br/>Почему перестал пользоваться услугами : "+res.question8
+        + " <br/>Обратится ли в будущем                : "+res.question9
+        + " <br/>Из каких источников узнал о БАСИ Плюс : "+res.question10
+        + " <br/>Сколько готов тратить                 : "+res.question11
+        + " <br/>Как долго готов ожидать               : "+res.question12
+        + " <br/>Позиции или трафик                    : "+res.question13
+        + " <br/>Что понравилось в работе              : "+res.question14
+        + " <br/>Что не понравилось                    : "+res.question15
+        + " <br/>Пожелания                             : "+res.question16
+        + " <br/>-------------------------------------------------------------\n\n"
+
+}

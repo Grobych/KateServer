@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.List;
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -40,6 +41,13 @@ public class MyController{
         return new PromoCode(atomicLong.incrementAndGet(),random.nextInt(1000000));
     }
 
+    @RequestMapping(value = "/getAll", method = RequestMethod.GET)
+    public @ResponseBody List<Questionnaire> getAllQuestionnaire(){
+        System.out.println("Get all command...");
+        List<Questionnaire> list = repository.findAll();
+        System.out.println(list.size());
+        return list;
+    }
 
 //    @RequestMapping("/")
 //    public String index(){
