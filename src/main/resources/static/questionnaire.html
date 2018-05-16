@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Анкета для клиентoв</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/all.css" rel="stylesheet">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/connection.js"></script>
+
+</head>
+<body>
+
+<div class="row" id="mainlbock">
+    <div class="col-md-6 col-md-offset-3">
+
+
+        <div class="">
+            <div class="well bg">
+
+                <form class="form-horizontal" name="form">
+                    <div class="form-group">
+                        <div class="col-sm-offset-1 col-sm-10">
+                            <label class="">Укажите Ваше имя или название Вашей фирмы</label>
+                            <input type="text" class="form-control" name="question1" id="question1" value=""><br/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-1 col-sm-10">
+                            <label class="">Являетесь ли вы клиентом нашей компании?</label>
+                            <div class="">
+                                <label class="radio-inline">
+                                    <input type="radio" name="question2" id="question2_1" value="Да">
+                                    Да
+                                </label><br/>
+                                <label class="radio-inline">
+                                    <input type="radio" name="question2" id="question2_2" value="Нет">
+                                    Нет
+                                </label><br/>
+                                <label class="radio-inline">
+                                    <input type="radio" name="question2" id="question2_3" value="Нет, но пользовался(-ась) услугами в прошлом">
+                                    Нет, но пользовался(-ась) услугами в прошлом
+                                </label><br/> <br/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-1 col-sm-10">
+                            <label class="">Как долго Вы пользовались нашими услугами?</label>
+                            <div class="">
+                                <label class="radio-inline">
+                                    <input type="radio" name="question3" id="question3_1" value="Меньше одного месяца">
+                                    Меньше одного месяца
+                                </label><br/>
+                                <label class="radio-inline">
+                                    <input type="radio" name="question3" id="question3_2" value="1 - 6 месяцев">
+                                    1 - 6 месяцев
+                                </label><br/>
+                                <label class="radio-inline">
+                                    <input type="radio" name="question3" id="question3_3" value="7 - 12 месяцев">
+                                    7 - 12 месяцев
+                                </label><br/>
+                                <label class="radio-inline">
+                                    <input type="radio" name="question3" id="question3_4" value="Более одного года">
+                                    Более одного года
+                                </label><br/>
+                                <label class="radio-inline">
+                                    <input type="radio" name="question3" id="question3_5" value="Пользуюсь в настоящее время">
+                                    Пользуюсь в настоящее время
+                                </label><br/>
+                                <label class="radio-inline">
+                                    <input type="radio" name="question3" id="question3_6" value="Никогда не пользовался(-ась)">
+                                    Никогда не пользовался(-ась)
+                                </label><br/><br/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-1 col-sm-10">
+                            <label class="">Перечислите, какими услугами «БАСИ Плюс» Вы пользовались</label>
+                            <textarea class="form-control" placeholder="Услуги" rows="3" name="question4" id="question4"></textarea><br/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-1 col-sm-10">
+                            <label class="">Как бы Вы оценили качество наших услуг по сравнению с подобными услугами, предлагаемыми конкурентами?</label>
+                            <div class="">
+                                <label class="radio-inline">
+                                    <input type="radio" name="question5" id="question5_1" value="Намного лучше">
+                                    Намного лучше
+                                </label><br/>
+                                <label class="radio-inline">
+                                    <input type="radio" name="question5" id="question5_2" value="Лучше">
+                                    Лучше
+                                </label><br/>
+                                <label class="radio-inline">
+                                    <input type="radio" name="question5" id="question5_3" value="Аналогичные">
+                                    Аналогичные
+                                </label><br/>
+                                <label class="radio-inline">
+                                    <input type="radio" name="question5" id="question5_4" value="Хуже">
+                                    Хуже
+                                </label><br/>
+                                <label class="radio-inline">
+                                    <input type="radio" name="question5" id="question5_5" value="Затрудняюсь ответить">
+                                    Затрудняюсь ответить
+                                </label><br/>
+                                <label class="radio-inline">
+                                    <input type="radio" name="question5" id="question5_6" value="Не пользовался(-ась) услугами">
+                                    Не пользовался(-ась) услугами
+                                </label><br/><br/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-1 col-sm-10">
+                            <label class="">Насколько Вы довольны качеством наших услуг?</label>
+                            <div class="">
+                                <label class="radio-inline">
+                                    <input type="radio" name="question6" id="question6_1" value="Очень доволен(-льна)">
+                                    Очень доволен(-льна)
+                                </label><br/>
+                                <label class="radio-inline">
+                                    <input type="radio" name="question6" id="question6_2" value="Доволен(-льна)">
+                                    Доволен(-льна)
+                                </label><br/>
+                                <label class="radio-inline">
+                                    <input type="radio" name="question6" id="question6_3" value="Доволен(-льна) в среднем">
+                                    Доволен(-льна) в среднем
+                                </label><br/>
+                                <label class="radio-inline">
+                                    <input type="radio" name="question6" id="question6_4" value="Недоволен(-льна)">
+                                    Недоволен(-льна)
+                                </label><br/>
+                                <label class="radio-inline">
+                                    <input type="radio" name="question6" id="question6_5" value="Совсем недоволен(-льна)">
+                                    Совсем недоволен(-льна)
+                                </label><br/>
+                                <label class="radio-inline">
+                                    <input type="radio" name="question6" id="question6_6" value="Не пользовался(-ась) услугами">
+                                    Не пользовался(-ась) услугами
+                                </label><br/><br/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-1 col-sm-10">
+                            <label class="">Насколько Вас устаивает цена на услуги по продвижению в «БАСИ Плюс»?</label>
+                            <div class="">
+                                <label class="radio-inline">
+                                    <input type="radio" name="question7" id="question7_1" value="Полностью устраивает">
+                                    Полностью устраивает
+                                </label><br/>
+                                <label class="radio-inline">
+                                    <input type="radio" name="question7" id="question7_2" value="В целом устраивает">
+                                    В целом устраивает
+                                </label><br/>
+                                <label class="radio-inline">
+                                    <input type="radio" name="question7" id="question7_3" value="Не устраивает">
+                                    Не устраивает
+                                </label><br/>
+                                <label class="radio-inline">
+                                    <input type="radio" name="question7" id="question7_4" value="Абсолютно не устраивает">
+                                    Абсолютно не устраивает
+                                </label><br/><br/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-1 col-sm-10">
+                            <label class="">Если в прошлом вы пользовались услугами по продвижению в БАСИ Плюс, но сейчас не являетесь нашим клиентом, укажите причину отказа</label>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="question8" id="question8_1" value="Услуга была разовой и уже не нужна"> Услуга была разовой и уже не нужна
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="question8"  id="question8_2" value="Сайт больше не нуждается в продвижении"> Сайт больше не нуждается в продвижении
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="question8" id="question8_3" value="Неподходящее качество услуг"> Неподходящее качество услуг
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="question8" id="question8_4" value="Выбрали подрядчика лучше"> Выбрали подрядчика лучше
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="question8" id="question8_5" value="Высокая цена"> Высокая цена
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="question8"  id="question8_6" value="Другое"> Другое
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="question8" id="question8_7" value="Не пользовался(-ась) услугами"> Не пользовался(-ась) услугами
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="question8" id="question8_8" value="Пользуюсь в настоящее время"> Пользуюсь в настоящее время
+                                </label><br/><br/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-1 col-sm-10">
+                            <label class="">Если в будущем вам понадобятся услуги по продвижению, обратитесь ли Вы к нам?</label>
+                            <div class="">
+                                <label class="radio-inline">
+                                    <input type="radio" name="question9" id="question9_1" value="Несомненно">
+                                    Несомненно
+                                </label><br/>
+                                <label class="radio-inline">
+                                    <input type="radio" name="question9" id="question9_2" value="Вероятно">
+                                    Вероятно
+                                </label><br/>
+                                <label class="radio-inline">
+                                    <input type="radio" name="question9" id="question9_3" value="Я не уверен(-а) в этом">
+                                    Я не уверен(-а) в этом
+                                </label><br/>
+                                <label class="radio-inline">
+                                    <input type="radio" name="question9" id="question9_4" value="Вероятно нет">
+                                    Вероятно нет
+                                </label><br/>
+                                <label class="radio-inline">
+                                    <input type="radio" name="question9" id="question9_5" value="Несомненно нет">
+                                    Несомненно нет
+                                </label><br/><br/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-1 col-sm-10">
+                            <label class="">Из каких источников Вы узнали о «БАСИ Плюс»?</label>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="question10" id="question10_1" value="Поисковые системы"> Поисковые системы
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="question10"  id="question10_2" value="Реклама в печатных СМИ"> Реклама в печатных СМИ
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="question10" id="question10_3" value="Наружная реклама"> Наружная реклама
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="question10" id="question10_4" value="Интернет"> Интернет
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="question10" id="question10_5" value="Рекомендации знакомых и коллег"> Рекомендации знакомых и коллег
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="question10"  id="question10_6" value="Другое"> Другое
+                                </label><br/><br/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-1 col-sm-10">
+                            <label class="">Какую месячную стоимость Вы готовы тратить на продвижение Вашего сайта?</label>
+                            <div class="">
+                                <label class="radio-inline">
+                                    <input type="radio" name="question11" id="question11_1" value="До 300 рублей">
+                                    До 300 рублей
+                                </label><br/>
+                                <label class="radio-inline">
+                                    <input type="radio" name="question11" id="question11_2" value="300 - 500 рублей">
+                                    300 - 500 рублей
+                                </label><br/>
+                                <label class="radio-inline">
+                                    <input type="radio" name="question11" id="question11_3" value="500 -700 рублей">
+                                    500 -700 рублей
+                                </label><br/>
+                                <label class="radio-inline">
+                                    <input type="radio" name="question11" id="question11_4" value="700 - 1000 рублей">
+                                    700 - 1000 рублей
+                                </label><br/>
+                                <label class="radio-inline">
+                                    <input type="radio" name="question11" id="question11_5" value="1000 - 2000 рублей">
+                                    1000 - 2000 рублей
+                                </label><br/>
+                                <label class="radio-inline">
+                                    <input type="radio" name="question11" id="question11_6" value="Более 2000 рублей">
+                                    Более 2000 рублей
+                                </label><br/><br/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-1 col-sm-10">
+                            <label class="">Какое время вы готовы ждать результатов продвижения сайта?</label>
+                            <div class="">
+                                <label class="radio-inline">
+                                    <input type="radio" name="question12" id="question12_1" value="До 1 месяца">
+                                    До 1 месяца
+                                </label><br/>
+                                <label class="radio-inline">
+                                    <input type="radio" name="question12" id="question12_2" value="1 - 2 месяца">
+                                    1 - 2 месяца
+                                </label><br/>
+                                <label class="radio-inline">
+                                    <input type="radio" name="question12" id="question12_3" value="2 - 3 месяца">
+                                    2 - 3 месяца
+                                </label><br/>
+                                <label class="radio-inline">
+                                    <input type="radio" name="question12" id="question12_4" value="3 - 5 месяцев">
+                                    3 - 5 месяцев
+                                </label><br/>
+                                <label class="radio-inline">
+                                    <input type="radio" name="question12" id="question12_5" value="5 - 8 месяцев">
+                                    5 - 8 месяцев
+                                </label><br/>
+                                <label class="radio-inline">
+                                    <input type="radio" name="question12" id="question12_6" value="Более 8-и месяцев в случае реальной необходимости">
+                                    Более 8-и месяцев в случае реальной необходимости
+                                </label><br/><br/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-1 col-sm-10">
+                            <label class="">Что из перечисленного для Вас важнее в процессе продвижения сайта?</label>
+                            <div class="">
+                                <label class="radio-inline">
+                                    <input type="radio" name="question13" id="question13_1" value="Рост позиций">
+                                    Рост позиций
+                                </label><br/>
+                                <label class="radio-inline">
+                                    <input type="radio" name="question13" id="question13_2" value="Прирост трафика">
+                                    Прирост трафика
+                                </label><br/><br/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-1 col-sm-10">
+                            <label class="">Укажите, что Вам понравилось в работе «БАСИ Плюс»?</label>
+                            <textarea class="form-control" placeholder="" rows="2" name="question14" id="question14"></textarea><br/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-1 col-sm-10">
+                            <label class="">Что Вам не понравилось в работе с «БАСИ Плюс»?</label>
+                            <textarea class="form-control" placeholder="" rows="2" name="question15" id="question15"></textarea><br/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-1 col-sm-10">
+                            <label class="">Укажите, пожалуйста, Ваши пожелания по совершенствованию работы компании</label>
+                            <textarea class="form-control" placeholder="Пожелания и предложения" rows="3" name="question16" id="question16"></textarea><br/>
+                        </div>
+                    </div>
+
+                </form>
+
+                <button type="submit" onclick="submit()" class="btn btn-block btn-success" >Получить промокод</button>
+                <a href="/promo.html">Другой html</a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+</body>
+</html>
