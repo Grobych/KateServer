@@ -3,14 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <title>Поздравляем!</title>
-    <link href="css/all.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!--<link href="css/all.css" rel="stylesheet">-->
     <script src="js/promo.js"></script>
+    <script src="js/utils.js"></script>
+
+
+    <style type="text/css">
+        #mainlbock {
+            margin-top: 5%;
+        }
+        .bg {
+            background-color: rgba(245, 245, 245, 0.8);
+        }
+
+        body {
+            background-image: url("tv2.jpg");
+            background-repeat: repeat-x;
+            background-color: rgba(64, 224, 208, 0.8);
+
+        }
+        .fig {
+            text-align: center;
+        }
+        .wrapper{
+            font-size: 2em;
+            border: 1px solid #000000;
+            padding: 1px;
+            display: inline-block;
+            margin: 20px;
+            color: #800000;
+        }
+
+    </style>
 </head>
 <body>
 
-    <h1 class="promo">Поздравляем!</h1>
-    <h2 class="promo">Ваш промо код: <p class="promo" id="promo_div">test</p></h2>
-    <img src="prazdnikikoshek2.jpg">
+    <!--<h1 class="promo">Поздравляем!</h1>-->
+    <!--<h2 class="promo">Ваш промо код: <p class="promo" id="promo_div">test</p></h2>-->
+    <!--<img src="prazdnikikoshek2.jpg">-->
+
+    <!--<font color="#800000">test</font>-->
+
+    <div id="mainlbock">
+        <div class="col-md-6 col-md-offset-3">
+
+
+            <div class="">
+                <div class="well bg">
+
+                    <form class="form-horizontal">
+
+                        <h1 class="promo" align="center">Спасибо!</h1>
+                        <br/>
+                        <p class="fig">Ваши ответы записаны</p>
+                        <h2 class="promo" align="center">Промо код: <p class="wrapper" class="promoCode" id="promo_div">test</p></h2>
+
+                        <p class="fig">Для получения дополнительной SEO услуги запомните и сообщите его нам</p>
+                        <br/>
+                        <p class="fig"><img src="tv.png"
+                                            width="550" alt="SEO"></p>
+
+                    </form>
+
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
     <script>
         getPromo();
     </script>

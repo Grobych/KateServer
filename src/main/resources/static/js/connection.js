@@ -28,7 +28,10 @@ function submit() {
 
     toPage('/promo.html')
 }
-
+function getReport() {
+    var password = prompt("Введите пароль");
+    validPassword(password);
+}
 function getAllQuest() {
     var xhr = new XMLHttpRequest();
 
@@ -76,4 +79,25 @@ function getQuestionnaireRes(res) {
         + " <br/>Пожелания                             : "+res.question16
         + " <br/>-------------------------------------------------------------\n\n"
 
+}
+
+function validPassword(password) {
+    var xhr = new XMLHttpRequest();
+
+    xhr.open("POST", "/password");
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhr.onload = function () {
+        var status = this.status;
+        if(status==200){
+            if (this.responseText == "true"){
+                toPage("/result.html");
+            }
+            else alert("Неверный пароль!");
+        }
+        else if(status==404)
+            console.log("Ресурс не найден")
+        else
+            console.log(this.statusText)
+    };
+    xhr.send("password="+password);
 }

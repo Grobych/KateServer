@@ -1,12 +1,45 @@
 #mainlbock {
     margin-top: 5%;
 }
-.promo{
-    text-align: center;
-}
+
 img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 40%;
+}
+.bg {
+    background-color: rgba(245, 245, 245, 0.8);
+}
+
+body {
+    background-image: url("tv2.jpg");
+    background-repeat: repeat-x;
+    background-color: rgba(64, 224, 208, 0.8);
+
+}
+.fig {
+    text-align: center;
+}
+
+
+.wrapper{
+    font-size: 2em;
+    border: 1px solid #000000;
+    padding: 1px;
+    display: inline-block;
+    margin: 20px;
+    color: #800000;
+}
+
+.promoCode{
+    color: #800000;
+}
+
+#cat{
+    position: fixed;
+    top: 85%;
+    right: 0%;
+    width: 250pt;
+    height: 250pt;
 }

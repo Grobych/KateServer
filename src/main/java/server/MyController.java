@@ -49,6 +49,13 @@ public class MyController{
         return list;
     }
 
+    @RequestMapping(value = "/password", method = RequestMethod.POST)
+    public @ResponseBody boolean validPassword(@RequestParam(value = "password") String password){
+        boolean res = password.equals("12345");
+        System.out.println(res);
+        return res;
+    }
+
 //    @RequestMapping("/")
 //    public String index(){
 //        System.out.println("Looking in the index controller.........");
