@@ -56,10 +56,4 @@ public class MyController{
         return res;
     }
 
-//    @RequestMapping("/")
-//    public String index(){
-//        System.out.println("Looking in the index controller.........");
-//        return "index";
-//    }
-
 }

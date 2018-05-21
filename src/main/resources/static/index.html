@@ -7,43 +7,67 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/all.css" rel="stylesheet">
 
-    <style>
-        #mainlbock {
-            margin-top: 5%;
-        }
-        {
-            text-align: center;
-            margin-top:  5%;
-        }
-    </style>
+    <script src="js/utils.js"></script>
+    <script src="js/connection.js"></script>
 
-    <script src="js\connection.js"></script>
-    <script src="js\utils.js"></script>
+<style type="text/css">
+    #mainlbock {
+        margin-top: 5%;
+    }
+    .bg {
+        background-color: rgba(245, 245, 245, 0.8);
+    }
+
+    body {
+        /*background-image: url("tv2.png");*/
+        /*background-repeat: repeat-x;*/
+        background-color: rgba(64, 224, 208, 0.8);
+
+    }
+    .fig {
+        text-align: center;
+    }
+    .wrapper{
+        font-size: 2em;
+        border: 1px solid #000000;
+        padding: 1px;
+        display: inline-block;
+        margin: 20px;
+
+    }
+
+</style>
 
 </head>
 <body>
+
 <div id="mainlbock">
     <div class="col-md-6 col-md-offset-3">
-        <div class="well bg">
-            <div class="form-horizontal">
-                <h1>Приглашаем Вас пройти анкету, чтобы получить промо код</h1>
-                <a href="/questionnaire.html">
-                    <button class="btn btn-block btn-success">
-                        Пройти тест!
-                    </button>
-                </a>
-                <!--<button class="btn btn-block btn-info" onclick="getReport()">-->
-                <!--Результаты-->
-                <!--</button>-->
 
+
+        <div class="">
+            <div class="well bg">
+
+                <form class="form-horizontal">
+                    <h1 class = "fig">Хoтите в TOП?<br/><br/></h1>
+
+                    <p class="fig"><img width="550pt" src="tv2.png" alt="SEO"></p>
+
+                    <h4 class = "fig"><br>Запoлните анкету и пoлучите дoпoлнительную бесплатную услугу oт <b>БАСИ Плюс</b> к Вашей текущей прoграмме SEO прoдвижения!<br/><br/></h4>
+                    <a href="/questionnaire.html">
+                        <button type="button" class="btn btn-block btn-success"><br/>
+                            <font size="6em">Заполнить!</font><br/><br/>
+                        </button>
+                    </a>
+                </form>
             </div>
         </div>
     </div>
 </div>
-<div id="cat">
-    <img src="cat.png" onclick="getReport()">
-</div>
 
+<div id="cat">
+    <img src="cat2.png" width="200pt" height="200pt" onclick="getReport()">
+</div>
 
 </body>
 </html>
